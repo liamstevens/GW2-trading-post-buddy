@@ -4,9 +4,6 @@ import sys
 import re
 from Tkinter import *
 
-
-
-
 #self defined find function
 def find(text, pattern, start):
     """Return the index of the first occurence of pattern in text starting
@@ -56,7 +53,6 @@ def search():
         r= br.open('http://gw2spidy.com')
         html = r.read()
 
- 
 
         #print the title
         print br.title()
@@ -218,6 +214,7 @@ def findprice():
     profit = int(profit)
     if profit > 0 :
         profit=str(profit)
+        #better to do using cases and a class perhaps
         if len(profit) < 3:
             prof=("Profit: " + profit + 'c')
             result.config(text=prof)
